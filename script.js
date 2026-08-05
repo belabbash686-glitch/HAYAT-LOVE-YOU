@@ -5,7 +5,7 @@ const heartContainer = document.getElementById("heartContainer");
 const particles = [];
 const TOTAL = 90;
 
-const SCALE = Math.min(window.innerWidth, window.innerHeight) / 45;
+const SCALE = Math.min(window.innerWidth, window.innerHeight) / 55;
 
 function heartPoint(t){
 
@@ -62,7 +62,7 @@ function createParticles(){
 
         });
 
-        span.style.fontSize = "20px";
+        span.style.fontSize = "15px";
 
 
     }
@@ -73,9 +73,9 @@ function animate(){
 
     particles.forEach(p=>{
 
-        p.x+=(p.tx-p.x)*0.025;
+        p.x+=(p.tx-p.x)*0.02;
 
-        p.y+=(p.ty-p.y)*0.025;
+        p.y+=(p.ty-p.y)*0.02;
 
         p.el.style.left=p.x+"px";
 
