@@ -1,0 +1,209 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#000;
+
+    overflow:hidden;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+/* شاشة البداية */
+
+#welcome{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:1s;
+
+    z-index:100;
+
+}
+
+/* زر البداية */
+
+#startBtn{
+
+    width:260px;
+    height:75px;
+
+    border:none;
+    border-radius:60px;
+
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+    font-size:28px;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    border:2px solid white;
+
+    box-shadow:
+    0 0 10px white,
+    0 0 25px white;
+
+}
+
+/* مرور الفأرة */
+
+#startBtn:hover{
+
+    transform:scale(1.08);
+
+    color:#ff4d6d;
+
+    border-color:#ff4d6d;
+
+    background:rgba(255,77,109,.15);
+
+    box-shadow:
+    0 0 20px #ff4d6d,
+    0 0 50px #ff4d6d,
+    0 0 80px #ff4d6d;
+
+}
+
+/* الضغط */
+
+#startBtn:active{
+
+    transform:scale(.95);
+
+}
+
+/* مكان القلب */
+
+#heartContainer{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* الكانفاس */
+
+#heartCanvas{
+
+    width:100vw;
+
+    height:100vh;
+
+    display:block;
+
+}
+
+/* كلمات الحب */
+
+.loveWord{
+
+    position:absolute;
+
+    color:#ff4d6d;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    white-space:nowrap;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    text-shadow:
+    0 0 6px #ff4d6d,
+    0 0 12px #ff4d6d,
+    0 0 24px #ff4d6d,
+    0 0 50px #ff4d6d;
+
+}
+#heartContainer{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+.loveWord{
+
+    position:absolute;
+
+    color:#ff4d6d;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    white-space:nowrap;
+
+    transform:translate(-50%,-50%);
+
+    text-shadow:
+        0 0 8px #ff4d6d,
+        0 0 18px #ff4d6d,
+        0 0 35px #ff4d6d;
+
+    transition:.3s;
+
+}
+@media(max-width:600px){
+    #startBtn{
+        width:200px;
+        height:60px;
+        font-size:22px;
+    }
+}
+#startBtn{
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 10px white;
+    }
+    to{
+        box-shadow:0 0 35px #ff4d6d;
+    }
+}
