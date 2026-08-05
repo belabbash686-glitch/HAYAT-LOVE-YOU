@@ -74,9 +74,9 @@ function animate(){
 
     particles.forEach(p=>{
 
-        p.x+=(p.tx-p.x)*0.02;
+        p.x+=(p.tx-p.x)*0.03;
 
-        p.y+=(p.ty-p.y)*0.02;
+        p.y+=(p.ty-p.y)*0.03;
 
         p.el.style.left=p.x+"px";
 
