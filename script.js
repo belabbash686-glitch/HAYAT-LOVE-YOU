@@ -5,7 +5,7 @@ const heartContainer = document.getElementById("heartContainer");
 const particles = [];
 const TOTAL = 90;
 
-const SCALE = 22;
+const SCALE = Math.min(window.innerWidth, window.innerHeight) / 45;
 
 function heartPoint(t){
 
